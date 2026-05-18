@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.arogyaNidhi.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_quiz"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_home_to_hospital"
+            app:destination="@id/hospitalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_home_to_schemes"
+            app:destination="@id/allSchemesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.arogyaNidhi.ui.quiz.QuizFragment"
+        android:label="Eligibility Check"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quiz_to_result"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/homeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.arogyaNidhi.ui.result.ResultFragment"
+        android:label="Your Results"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_result_to_hospital"
+            app:destination="@id/hospitalFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_result_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_result_to_scheme_detail"
+            app:destination="@id/schemeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/schemeDetailFragment"
+        android:name="com.arogyaNidhi.ui.result.SchemeDetailFragment"
+        android:label="Scheme Details"
+        tools:layout="@layout/fragment_scheme_detail">
+        <argument
+            android:name="schemeId"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/hospitalFragment"
+        android:name="com.arogyaNidhi.ui.hospital.HospitalFragment"
+        android:label="Find Hospital"
+        tools:layout="@layout/fragment_hospital"/>
+
+    <fragment
+        android:id="@+id/allSchemesFragment"
+        android:name="com.arogyaNidhi.ui.AllSchemesFragment"
+        android:label="All Schemes"
+        tools:layout="@layout/fragment_all_schemes">
+        <action
+            android:id="@+id/action_all_schemes_to_scheme_detail"
+            app:destination="@id/schemeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+</navigation>

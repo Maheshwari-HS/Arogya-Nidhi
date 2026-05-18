@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors - Warm Green (health/trust) -->
+    <color name="green_primary">#2E7D32</color>
+    <color name="green_dark">#1B5E20</color>
+    <color name="green_light">#C8E6C9</color>
+    <color name="green_accent">#4CAF50</color>
+
+    <!-- Background -->
+    <color name="bg_main">#F1F8F2</color>
+    <color name="bg_card">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#555555</color>
+    <color name="text_hint">#9E9E9E</color>
+
+    <!-- Status -->
+    <color name="error_red">#C62828</color>
+    <color name="white">#FFFFFF</color>
+    <color name="amber">#FF8F00</color>
+
+    <!-- Primary/Theme -->
+    <color name="colorPrimary">#2E7D32</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#4CAF50</color>
+</resources>

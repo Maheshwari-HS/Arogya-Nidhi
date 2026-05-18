@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arogya Nidhi</string>
+    <string name="app_name_hindi">आरोग्य निधि</string>
+    <string name="tagline">Your Health Scheme Eligibility Advisor</string>
+    <string name="check_eligibility">Check My Eligibility</string>
+    <string name="find_hospital">Find Nearest Hospital</string>
+    <string name="browse_schemes">Browse All Schemes</string>
+</resources>
